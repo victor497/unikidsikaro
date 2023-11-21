@@ -1,0 +1,283 @@
+/* Adicione estas regras CSS ao seu arquivo styles.css */
+body,button, a {
+  font-family: 'Itim', cursive !important;
+  margin: 0;
+  padding: 0;
+  color: #4a9ae9;
+}
+.h2{
+  color: #4a9ae9;
+}
+
+header {
+  background-color: #4a9ae9;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+}
+
+/* Adiciona uma linha branca abaixo do cabeçalho */
+header::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  margin: 0 15px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Adicione estas regras para os links no menu de navegação */
+nav ul li a {
+  color: white;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff69b4;
+  text-shadow: 0 0 8px rgba(255, 105, 180, 0.7), 0 0 29px #ff69b4;
+}
+
+/* Adicione estas regras para remover a borda do botão neon na navegação */
+nav ul li a.neon-btn {
+  border: none !important;
+  background-color: transparent !important;
+}
+
+nav ul li a.neon-btn:hover,
+nav ul li a.neon-btn:focus {
+  background-color: transparent !important;
+  color: #ff69b4 !important;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  background-size: cover;
+  align-items: center;
+  background-image: url('img/Design\ sem\ nome\ \(17\).png');
+  position: relative;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-button {
+  padding: 30px 40px !important;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 2.5em !important;
+}
+
+header img {
+  max-width: 250px;
+  height: auto;
+}
+
+.content-section {
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+/* Adiciona uma linha branca acima do rodapé */
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+}
+
+.news-gallery-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.news-section,
+.gallery-section {
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: white;
+  flex: 1;
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.news-section img,
+.gallery-section img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+  width: 600px;
+  border: 20px solid #4a9ae9;
+  max-width: 100%;
+}
+
+.news-section img {
+  width: 600px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Adiciona margem acima dos botões para espaçamento */
+.news-section .section-button,
+.gallery-section .section-button {
+  margin-top: 20px;
+}
+
+footer {
+  background-color: #4a9ae9;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+}
+
+.devs-button {
+  background-color: #4a9ae9;
+  color: #202631 !important;
+  padding: 3px 5px !important;
+  border: none;
+  border-radius: 8px !important;
+  cursor: pointer;
+  font-size: 1em !important;
+}
+
+.devs-container {
+  display: none;
+}
+input[type="submit"] {
+  padding: 10px 20px !important; /* Reduz o preenchimento do botão */
+  font-size: 1em !important;     /* Define um tamanho de fonte menor */
+}
+/* BOTÃO NEON */
+.neon-btn {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #ff69b4;
+  border: 5px solid #ff69b4;
+  padding: 16px 32px;
+  border-radius: 16px;
+
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3), 0 0 29px #ff69b4;
+
+  box-shadow: inset 0 0 32px #ff69b4, 0 0 32px #ff69b4;
+
+  position: relative;
+  transition: background-color 0.3s ease; /* Adiciona transição para suavizar a mudança de cor de fundo */
+}
+
+.neon-btn::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  
+  left: 0;
+  top: 120%;
+
+  transform: perspective(32px) rotateX(40deg) scale(1, 0.35);
+  filter: blur(32px);
+  opacity: 0.7;
+}
+
+.neon-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ff69b4;
+  box-shadow: 0 0 64px 16px #ff69b4;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 100ms linear;
+}
+
+/* Adiciona estilo para o estado de hover */
+.neon-btn:hover,
+.neon-btn:focus {
+  background-color: #ff69b4; /* Cor de fundo rosa ao passar o mouse */
+  color: #202631;
+  text-shadow: none;
+}
+
+.neon-btn:hover::after,
+.neon-btn:focus::after {
+  opacity: 1;
+}
+
+.neon-btn:hover::before,
+.neon-btn:focus::before {
+  opacity: 1;
+}
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(74, 154, 233, 0.7); /* Fundo azul com transparência */
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+

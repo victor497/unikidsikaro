@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <title>UNIKIDS</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="img/UniKids 02.png" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="#" onclick="openPopup()">Seja UNIKIDS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="container">
+            <a href="#" onclick="openPopup()" class="cta-button neon-btn">Seja UNIKIDS</a>
+        </section>
+
+        <section class="image-section">
+        </section>
+
+        <section class="content-section">
+            <div class="news-gallery-container">
+                <div class="news-section">
+                    <h2>Últimas Notícias</h2>
+                    <img src="img/olhando-um-garotinho-de-escola-usando-uma-bolsa-e-fones-de-ouvido-segurando-um-livro-e-falando-no-alto-falante.jpg" alt="Ícone de Notícias">
+                    <!-- Conteúdo de notícias -->
+                    <a href="noticias.html" class="section-button neon-btn">Ver Notícias</a>
+                </div>
+
+                <div class="gallery-section">
+                    <h2>Galeria</h2>
+                    <img src="img/boys-286245_640.jpg" alt="Ícone de Galeria">
+                    <!-- Conteúdo da galeria -->
+                    <a href="galeria.html" class="section-button neon-btn">Ver Galeria</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Formulário de Inscrição</h2>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome">
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email">
+
+                <label for="nome">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone">
+
+                <input type="submit"  class="neon-btn" value="Enviar">
+            </form>
+        </div>
+    </div>
+    
+
+    <footer>
+        <button class="devs-button neon-btn"  onclick="toggleDevs()">Devs</button>
+        <div id="devsContainer" class="devs-container">
+          <p>Ikaro Mendes</p>
+          <p>Luan</p>
+        </div>
+        <p>&copy; 2023 UniKids. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

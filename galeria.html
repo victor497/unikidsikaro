@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="galeria.css"> <!-- Adicionando o novo arquivo de estilo para a galeria -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <title>UNIKIDS - Galeria</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="img/UniKids 02.png" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="#" onclick="openPopup()">Seja UNIKIDS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="containerg">
+            <h1>Galeria</h1>
+            <div class="photo-grid">
+                <div class="photo-item">
+                    <img src="galeria/pexels-caleb-oquendo-3042432.jpg" alt="Foto 1">
+                    <p class="caption">Volta as aulas</p>
+                </div>
+                <div class="photo-item">
+                    <img src="galeria/pexels-eren-li-7169347.jpg" alt="Foto 2">
+                    <p class="caption">Feira de artes</p>
+                </div>
+                <div class="photo-item">
+                    <img src="galeria/pexels-cdc-3992949.jpg" alt="Foto 3">
+                    <p class="caption">Feira da tecnologia</p>
+                </div>
+                <div class="photo-item">
+                    <img src="galeria/pexels-tobit-nazar-nieto-hernandez-3114072.jpg" alt="Foto 4">
+                    <p class="caption">Feira de cinema</p>
+                </div>
+            </div>
+        </section>
+    </main> 
+    
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Formulário de Inscrição</h2>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome">
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email">
+
+                <label for="nome">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone">
+
+                <input type="submit"  class="neon-btn" value="Enviar">
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <button class="devs-button neon-btn" onclick="toggleDevs()">Devs</button>
+        <div id="devsContainer" class="devs-container">
+            <p>Ikaro Mendes</p>
+            <p>Luan</p>
+        </div>
+        <p>&copy; 2023 UNIKIDS. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
